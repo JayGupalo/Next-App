@@ -1,13 +1,10 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="text-center pt-12">
-      <h1 className="text-3xl capitalize font-bold mb-4">
-        Welcome to my blog!
+      <h1 className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+        DashBoard
       </h1>
 
-      <p className="text-[16px]">This a a Next js blog.</p>
     </div>
   );
 }

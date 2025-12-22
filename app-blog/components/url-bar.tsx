@@ -11,15 +11,14 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export const URLBar = () => {
-  let router = useRouter();
-  let pathname = usePathname();
-  let searchParams = useSearchParams();
-  let [isReloading, setIsReloading] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isReloading, setIsReloading] = useState(false);
 
-  let url = new URL(pathname, "http://foo.com");
+  const url = new URL(pathname, "http://foo.com");
   url.search = searchParams.toString();
 
-  console.info(url.search);
 };
 
 export default URLBar;
