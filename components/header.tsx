@@ -9,6 +9,7 @@ const HeaderLabels = {
   PAGINATION: "Pagination",
   TIC_TAC_TOE: "Tic Tac Toe",
   PDF_VIEWER: "Pdf Viewer",
+  MAP: "Map",
 } as const;
 
 const Header = () => {
@@ -38,10 +39,10 @@ const Header = () => {
           <Link href="/pagination">{HeaderLabels.PAGINATION}</Link>
         </li>
         <li>
-          <Link href="/game">{HeaderLabels.TIC_TAC_TOE}</Link>
+          <Link href="/pdf-viewer">{HeaderLabels.PDF_VIEWER}</Link>
         </li>
         <li>
-          <Link href="/pdf-viewer">{HeaderLabels.PDF_VIEWER}</Link>
+          <Link href="/map">{HeaderLabels.MAP}</Link>
         </li>
       </ul>
     </div>
