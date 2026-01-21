@@ -1,5 +1,14 @@
+import SearchSection from "./components/search-section";
+import { getArticles } from "data/loaders";
+
 const Pagination = async () => {
-  return <></>;
+  const data = await getArticles();
+
+  return (
+    <>
+
+    </>
+  );
 };
 
 export default Pagination;

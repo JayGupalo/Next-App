@@ -16,26 +16,28 @@ export default function DashBoardLayout({
             >
               <span className="">Dashboard</span>
             </Link>
-            <div className="flex-1 overflow-auto py-2">
-              <nav className="grid items-start px-4 text-sm font-medium">
-                <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-200 transition-all hover:text-blue-100 dark:text-blue-400 dark:hover:text-blue-1"
-                  href="/dashboard/summaries"
-                >
-                  Summaries
-                </Link>
+          </div>
 
-                <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-200 transition-all hover:text-blue-100 dark:text-blue-400 dark:hover:text-blue-1"
-                  href="/dashboard/account"
-                >
-                  Account
-                </Link>
-              </nav>
-            </div>
+          <div className="flex-1 overflow-auto py-2">
+            <nav className="grid items-start px-4 text-sm font-medium">
+              <Link
+                className="flex items-center rounded-lg px-3 py-4 text-gray-200 transition-all hover:text-blue-100 dark:text-blue-400"
+                href="/dashboard/articles"
+              >
+                Articles
+              </Link>
+
+              <Link
+                className="flex items-center  rounded-lg px-3  text-gray-200 transition-all hover:text-blue-100 dark:text-blue-400"
+                href="/dashboard/account"
+              >
+                Account
+              </Link>
+            </nav>
           </div>
         </div>
       </nav>
+      <main className="flex flex-col">{children}</main>
     </div>
   );
 }

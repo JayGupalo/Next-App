@@ -8,11 +8,7 @@ interface IProps {
 
 const SEARCH_LABEL = "Post Search";
 
-interface IProps {
-  retrieveQuery: (val: string) => void;
-}
-
-const SearchBar = ({ retrieveQuery }: IProps) => {
+const SearchBar = () => {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -28,8 +24,6 @@ const SearchBar = ({ retrieveQuery }: IProps) => {
     } else {
       params.delete("query");
     }
-
-    retrieveQuery(searchTerm);
 
     replace(`${pathname}?${params.toString()}`);
   }, 1000);
@@ -66,7 +60,7 @@ const SearchBar = ({ retrieveQuery }: IProps) => {
           <input
             type="search"
             id="search"
-            className="block w-full p-3 ps-9 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+            className="block w-full p-3 ps-9 bg-neutral-secondary-medium radius-md border border-default-medium text-sm rounded-lg focus:outline-2 focus:border-brand shadow-xs placeholder:text-body"
             placeholder="Search"
             onChange={(e) => handleSearch(e.target.value)}
             defaultValue={searchParams.get("query")?.toString()}
@@ -74,7 +68,7 @@ const SearchBar = ({ retrieveQuery }: IProps) => {
           />
           <button
             type="button"
-            className="absolute end-1.5 bottom-1.5 text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none"
+            className="absolute end-1.5 bottom-1.5 text-white bg-indigo-800 hover:bg-indigo-300 pointer box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none"
           >
             Search
           </button>
